@@ -1,5 +1,5 @@
 import React from "react";
-import AdlerImage from "../img/adler.jpg"
+import AdlerImage from "../img/adler01.jpeg"
 
 function About() {
 
@@ -10,14 +10,12 @@ function About() {
     let textCreditsDesign = "Joakim Aronsson – Design ";
     let textCreditsCode = "Adele Kosman – Code";
 
-    let textContact = "hello [ at ] amkosman.xyz";
-
     return (
         <div className="box">
             <p className="text-title" style={{color: "black"}}>{textHeader}</p>
             <p className="text-body" style={{}}>{textBody}</p>
             <div className="img" style={{}}>
-                <img src={AdlerImage} alt="Pic of Adler" style={{width:"467px"}} ></img>
+                <img src={AdlerImage} alt="Pic of Adler"></img>
             </div>
             <p className="text-body">Credits:</p>
             <p className="text-body">{textCreditsDesign}</p>

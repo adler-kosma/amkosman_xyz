@@ -63,7 +63,7 @@ background: red;
 }
 
 img {
-width: 100%;
+width: 30%;
 display: block;
 margin: 50px;
 margin-right:auto;
@@ -294,6 +294,10 @@ height: 100%;
 }
 
 @media screen and (max-width: 1000px) {
+
+img {
+  width: 100%;
+}
 
 .box {
   left: 80px;
