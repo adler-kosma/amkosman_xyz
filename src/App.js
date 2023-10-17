@@ -1,5 +1,5 @@
 import './styles/App.css';
-import Route from './components/Route';
+import RouteElement from './components/Route';
 import Menu from './pages/Menu';
 import About from './pages/About';
 import Installations from './pages/Installations';
@@ -8,7 +8,7 @@ import Discography from './pages/Discography';
 import background from './img/collage-orgel-shoe.png';
 import Contact from './pages/Contact'
 import * as React from "react";
-import { Navigate } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 
 
 
@@ -16,31 +16,33 @@ import { Navigate } from "react-router-dom";
 export default function App () {
   return (
       <div className="img-background" style={{ backgroundImage: `url(${background})`, height: "653px"}}>
-        <Route path="/">
+        <RouteElement path="/">
           <Menu />
-        </Route>
+        </RouteElement>
         <div>
-          <Route path="/about">
+          <RouteElement path="/about">
             <Menu />
             <About />
-          </Route>
-          <Route path="/installations">
+          </RouteElement>
+          <RouteElement path="/installations">
             <Menu />
             <Installations />
-          </Route>
-          <Route path="/multichannel">
+          </RouteElement>
+          <RouteElement path="/multichannel">
             <Menu />
             <Sounds />
-          </Route>
-          <Route path="/discography">
+          </RouteElement>
+          <RouteElement path="/discography">
             <Menu />
             <Discography />
-          </Route>
-          <Route path="/contact">
+          </RouteElement>
+          <RouteElement path="/contact">
             <Menu />
             <Contact />
-          </Route>
-      
+          </RouteElement>
+       
+            {/* default redirect to home page */}
+          <Route path="*" element={<Navigate to="/" />} />
         </div>
       </div>
   );
