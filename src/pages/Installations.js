@@ -5,6 +5,7 @@ function Installations() {
   return (
     <div>
       <div className="box">
+      <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Installations</h1>
       {INSTALLATION.map(({ year, projects }) => {
           return (
             <div>

@@ -12,6 +12,7 @@ function About() {
 
     return (
         <div className="box">
+            <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>About</h1>
             <p className="text-title" style={{color: "black"}}>{textHeader}</p>
             <p className="text-body" style={{}}>{textBody}</p>
             <div className="img" style={{}}>

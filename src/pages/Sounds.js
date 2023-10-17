@@ -5,6 +5,7 @@ function Sounds() {
   return (
     <div>
       <div className="box">
+      <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Multichannel</h1>
       {SOUNDS.map(({ year, projects }) => {
           return (
             <div>

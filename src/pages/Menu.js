@@ -1,12 +1,12 @@
-import Link from "./Link";
+import Link from "../components/Link";
 
 function Menu() {
     const links = [
         {label: 'home', path: '/'},
         {label: 'about', path: '/about'},
+        {label: 'discography', path: '/discography'},
         {label: 'installation', path: '/installations'},
-        {label: 'sound', path: '/sounds'},
-        {label: 'releases', path: '/releases'},
+        {label: 'multichannel', path: '/multichannel'},
         {label: 'contact', path: '/contact'},
     ];
 
