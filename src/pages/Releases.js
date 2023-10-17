@@ -26,7 +26,7 @@ function Releases() {
 
 const RELEASES = [
     {year: "2023", projects: [
-        { projectName: "VOLVM 2. pieces", durata: "45'", format: "2.0"},
+        { projectName: "Unusually Lost bits", durata: "7' 15", format: "2.0", description: "1. Intro: Unusually Lost Bits 2. Unusually Lost bits"},
     ]},
     {year: "2018", projects: [
         { projectName: "VOLVM 1.turbulence", durata:"23' 22", format:"2.0", description: "1. confidence 2. nervous 3. intermission 4. save time 5. Santorini"},
