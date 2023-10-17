@@ -5,7 +5,7 @@ function Menu() {
         {label: 'home', path: '/'},
         {label: 'about', path: '/about'},
         {label: 'discography', path: '/discography'},
-        {label: 'installation', path: '/installations'},
+        {label: 'installations', path: '/installations'},
         {label: 'multichannel', path: '/multichannel'},
         {label: 'contact', path: '/contact'},
     ];
