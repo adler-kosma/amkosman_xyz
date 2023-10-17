@@ -1,11 +1,25 @@
 {
-    "short_name": "",
-    "name": "",
-    "icons": [
-      {
-        "src": "favico.ico",
-        "type": "image/x-icon",
-        "sizes": "500x500"
-      }
-    ]
+  "short_name": "Adele Marcia Kosman",
+  "name": "Composer and Artist",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
