@@ -8,7 +8,6 @@ import Discography from './pages/Discography';
 import background from './img/collage-orgel-shoe.png';
 import Contact from './pages/Contact'
 import * as React from "react";
-import { Route, Navigate } from "react-router-dom";
 
 
 
@@ -40,9 +39,6 @@ export default function App () {
             <Menu />
             <Contact />
           </RouteElement>
-       
-            {/* default redirect to home page */}
-          <Route path="*" element={<Navigate to="/" />} />
         </div>
       </div>
   );
