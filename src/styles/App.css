@@ -304,8 +304,11 @@ img {
 }
 
 h1 {
+  background-color: rgb(255, 253, 253, .4) ;
   font-size: 8vw;
   line-height: 2.7;
+  box-shadow: 0px 0px 0px black;
+
 }
 
 .hide1 {
