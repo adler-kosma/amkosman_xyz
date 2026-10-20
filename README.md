@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Deployment
+
+Every push to `master` builds the site and uploads `build/` to one.com over SFTP
+(`.github/workflows/deploy.yml`). It can also be run by hand from the Actions tab.
+Files on the server are never deleted, only added or overwritten.
+
+Required repository secrets (Settings → Secrets and variables → Actions):
+
+- `SFTP_HOST` – one.com SFTP host
+- `SFTP_USER` – SFTP username
+- `SFTP_PASSWORD` – SFTP password
+- `SFTP_REMOTE_DIR` – optional, folder that holds the website (defaults to `/`)
