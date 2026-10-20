@@ -59,7 +59,7 @@ background: black;
 }
 
 ::selection {
-    background: red;
+    background: #d8a7b1;
 }
 
 img {
@@ -72,6 +72,9 @@ img {
 }
 
 .img-background {
+  background-image: url('../img/collage-yi-chen-lee.jpg');
+  background-size: cover;
+  background-position: center;
   width: 100%;
   display: block;
   margin: 50px;
@@ -262,6 +265,26 @@ filter: blur(0px);
   line-height: 1;
 }
 
+.credits {
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.credits .text-body {
+  font-size: 0.7vw;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.credits .credits-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
 .logo {
   width: 50%;
   position: absolute;
@@ -276,7 +299,7 @@ filter: blur(0px);
 
 .video-background {
   position: fixed;
-  background-color: red;
+  background-color: #d8a7b1;
   background: black;
   opacity: 0.5;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -293,6 +316,12 @@ filter: blur(0px);
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+.img-background {
+  background-image: url('../img/background-mobile-yi-chen-lee.jpg');
+}
+}
+
 @media screen and (max-width: 1000px) {
 
 img {
@@ -301,6 +330,8 @@ img {
 
 .box {
   left: 80px;
+  right: 10px;
+  width: auto;
 }
 
 h1 {
@@ -330,6 +361,10 @@ h1 {
   font-size: 2.5vw;
   margin-left:25px;
   margin-right:25px;
+}
+
+.credits .text-body {
+  font-size: 1.8vw;
 }
 
 .hide1 {

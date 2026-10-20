@@ -9,7 +9,7 @@ function Sounds() {
       {SOUNDS.map(({ year, projects }) => {
           return (
             <div>
-               <p className="text-header" style={{color: "red", top: "10px"}}>{year}</p>
+               <p className="text-header" style={{color: "#d8a7b1", top: "10px"}}>{year}</p>
                {projects.map(({ projectName, durata, format, description }) => {
                 return (
                     <div>

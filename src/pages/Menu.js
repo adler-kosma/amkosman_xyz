@@ -4,6 +4,7 @@ function Menu() {
     const links = [
         {label: 'home', path: '/'},
         {label: 'about', path: '/about'},
+        {label: 'works', path: '/works'},
         {label: 'discography', path: '/discography'},
         {label: 'installations', path: '/installations'},
         {label: 'multichannel', path: '/multichannel'},

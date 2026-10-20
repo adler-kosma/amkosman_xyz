@@ -5,8 +5,8 @@ import About from './pages/About';
 import Installations from './pages/Installations';
 import Sounds from './pages/Sounds';
 import Discography from './pages/Discography';
-import background from './img/collage-orgel-shoe.png';
 import Contact from './pages/Contact'
+import Works from './pages/Works';
 import * as React from "react";
 
 
@@ -14,7 +14,7 @@ import * as React from "react";
 
 export default function App () {
   return (
-      <div className="img-background" style={{ backgroundImage: `url(${background})`, height: "653px"}}>
+      <div className="img-background" style={{ height: "100vh"}}>
         <RouteElement path="/">
           <Menu />
         </RouteElement>
@@ -22,6 +22,10 @@ export default function App () {
           <RouteElement path="/about">
             <Menu />
             <About />
+          </RouteElement>
+          <RouteElement path="/works">
+            <Menu />
+            <Works />
           </RouteElement>
           <RouteElement path="/installations">
             <Menu />

@@ -9,7 +9,7 @@ function Installations() {
       {INSTALLATION.map(({ year, projects }) => {
           return (
             <div>
-               <p className="text-header" style={{color: "red", top: "10px"}}>{year}</p>
+               <p className="text-header" style={{color: "#d8a7b1", top: "10px"}}>{year}</p>
                {projects.map(({ projectName, durata, format, description }) => {
                 return (
                     <div>
@@ -26,6 +26,9 @@ function Installations() {
 }
 
 const INSTALLATION = [
+    {year: "2024", projects: [
+        { projectName: "Time is My Body", format: "4.0", description: "4-channel sound piece for installation by Signe Johannessen. Premiered at Bohusläns Museum."},
+    ]},
     {year: "2023", projects: [
         { projectName: "Prey/Pray", durata: "12'", format: "video with stereo sound",link: "https://signejohannessen.se/prey-pray-2023/", linkName: "www.signeJohannessen.se", description: "Video work by Signe Johanessen, sound and music by Adele Kosman. Exhibited at Örebro Konsthall 01.04.23-28.05.23 and Oslo Kunstforening 10.08.23—17.09.23"},
     ]},
