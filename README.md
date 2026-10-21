@@ -62,7 +62,8 @@ found in the one.com Control Panel under SSH & SFTP:
 - `SFTP_HOST` – one.com SFTP host
 - `SFTP_USER` – SFTP username
 - `SFTP_PASSWORD` – SFTP password
-- `SFTP_REMOTE_DIR` – optional, folder that holds the website (defaults to `/www`)
+- `SFTP_REMOTE_DIR` – optional, folder that holds the website (defaults to the one.com web root,
+  `/customers/2/2/f/c3svif7fk/webroots/www`)
 
 ## Credits
 

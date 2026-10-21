@@ -42,13 +42,10 @@ jobs:
             echo "::warning::SFTP secrets are not set, skipping upload."
             exit 0
           fi
-          REMOTE_DIR="${SFTP_REMOTE_DIR:-/www}"
+          REMOTE_DIR="${SFTP_REMOTE_DIR:-/customers/2/2/f/c3svif7fk/webroots/www}"
           lftp --env-password -u "$SFTP_USER" "sftp://$SFTP_HOST" <<LFTP
           set sftp:auto-confirm yes
           set net:max-retries 3
-          echo "Webroots:"
-          cls -l /customers/2/2/f/c3svif7fk/webroots/
-          find -d 2 /customers/2/2/f/c3svif7fk/webroots/
           echo "Remote directory before upload:"
           cls -1 "$REMOTE_DIR"
           mirror --reverse --verbose --parallel=4 build/ "$REMOTE_DIR"
