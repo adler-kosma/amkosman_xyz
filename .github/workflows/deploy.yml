@@ -46,6 +46,12 @@ jobs:
           lftp --env-password -u "$SFTP_USER" "sftp://$SFTP_HOST" <<LFTP
           set sftp:auto-confirm yes
           set net:max-retries 3
+          echo "Server root:"
+          cls -l /
+          echo "Webroots:"
+          find -d 3 /webroots/
+          echo "Customers:"
+          find -d 6 /customers/
           echo "Remote directory before upload:"
           cls -1 "$REMOTE_DIR"
           mirror --reverse --verbose --parallel=4 build/ "$REMOTE_DIR"
