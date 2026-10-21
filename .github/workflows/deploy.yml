@@ -42,7 +42,7 @@ jobs:
             echo "::warning::SFTP secrets are not set, skipping upload."
             exit 0
           fi
-          REMOTE_DIR="${SFTP_REMOTE_DIR:-/}"
+          REMOTE_DIR="${SFTP_REMOTE_DIR:-/www}"
           lftp --env-password -u "$SFTP_USER" "sftp://$SFTP_HOST" <<LFTP
           set sftp:auto-confirm yes
           set net:max-retries 3
