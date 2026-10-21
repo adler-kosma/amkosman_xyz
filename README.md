@@ -1,83 +1,69 @@
-# Getting Started with Create React App
+# amkosman.xyz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio website of composer and vocalist Adele Marcia Kosman, live at
+[amkosman.xyz](https://amkosman.xyz).
 
-## Available Scripts
+The site is a small single-page React app built with
+[Create React App](https://create-react-app.dev/). It is compiled to plain
+static files (HTML, CSS, JS, images) and those files are uploaded to one.com
+web hosting. There is no server-side code.
 
-In the project directory, you can run:
+## Where to edit content
 
-### `npm start`
+| Page | File | What's in it |
+|---|---|---|
+| Menu | `src/pages/Menu.js` | Menu links |
+| About | `src/pages/About.js` | Intro, bio and credits |
+| Works | `src/pages/Works.js` | Selected works, by year (`WORKS` list at the bottom) |
+| Discography | `src/pages/Discography.js` | Releases with Bandcamp players |
+| Installations | `src/pages/Installations.js` | Installations, by year (`INSTALLATION` list) |
+| Multichannel | `src/pages/Sounds.js` | Multichannel pieces, by year (`SOUNDS` list) |
+| Contact | `src/pages/Contact.js` | Instagram and email |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Styling: `src/styles/App.css`
+- Images: `src/img/` (background collage, plus a separate mobile background)
+- Routes (which URL shows which page): `src/App.js`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Run locally
 
-### `npm test`
+Requires [Node.js](https://nodejs.org/) (version 20 or newer).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install --legacy-peer-deps
+npm start
+```
 
-### `npm run build`
+Opens the site at http://localhost:3000 and reloads when you save a file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`--legacy-peer-deps` is needed because of an old dependency conflict in
+`package.json`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm run build
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Creates the finished website in `build/`. Those are the files that go on the
+web host. `public/.htaccess` is included so links like `/about` work on the
+server.
 
 ## Deployment
 
-Every push to `master` builds the site and uploads `build/` to one.com over SFTP
-(`.github/workflows/deploy.yml`). It can also be run by hand from the Actions tab.
-Files on the server are never deleted, only added or overwritten.
+Every push to `master` builds the site and uploads `build/` to one.com over
+SFTP (`.github/workflows/deploy.yml`). To deploy by hand, open the
+[Deploy workflow](https://github.com/adler-kosma/amkosman_xyz/actions/workflows/deploy.yml)
+and click **Run workflow**. Files on the server are never deleted, only added
+or overwritten.
 
-Required repository secrets (Settings → Secrets and variables → Actions):
+Required repository secrets (Settings → Secrets and variables → Actions),
+found in the one.com Control Panel under SSH & SFTP:
 
 - `SFTP_HOST` – one.com SFTP host
 - `SFTP_USER` – SFTP username
 - `SFTP_PASSWORD` – SFTP password
 - `SFTP_REMOTE_DIR` – optional, folder that holds the website (defaults to `/`)
+
+## Credits
+
+Design: Joakim Aronsson · Code: Adele Kosman · Photo: Yi-Chen Lee
