@@ -1,18 +1,18 @@
 import React from "react";
 import WorksComponent from "../components/WorksComponent";
 
-function Sounds() {
+function Compositions() {
   return (
     <div>
       <div className="box">
-      <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Multichannel</h1>
-      {SOUNDS.map(({ year, projects }) => {
+      <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Compositions</h1>
+      {COMPOSITIONS.map(({ year, projects }) => {
           return (
-            <div>
+            <div key={year}>
                <p className="text-header" style={{color: "#d8a7b1", top: "10px"}}>{year}</p>
                {projects.map(({ projectName, durata, format, description }) => {
                 return (
-                    <div>
+                    <div key={projectName}>
                         <WorksComponent projectName={projectName} durata={durata} format={format} description={description} />
                     </div>
                 );
@@ -25,12 +25,20 @@ function Sounds() {
   );
 }
 
-const SOUNDS = [
+const COMPOSITIONS = [
+    {year: "2026", projects: [
+        { projectName: "Mini Works at Sound of Stockholm", format: "performance", description: "Ensemble: vocal trio and dancer Anna Fitoussi."},
+        { projectName: "Speaking (to the sea)", format: "choir", description: "Choir piece commissioned by Art Inside Out as a part of a collaboration with Signe Johannessen and her video work Havskoloni."},
+    ]},
+    {year: "2025", projects: [
+        { projectName: "Enter", format: "choir", description: "Choir piece commissioned by Konstmusiksystrar. Premiered at Eric Ericssonhallen by Tusen Tungor."},
+    ]},
     {year: "2020", projects: [
         { projectName: "Degree concert 'Give/Take/in concert'", durata: "35'", format: "4.1", description: "Live coding live performance live concert. Along with my thesis 'The Live Concert as a Compositional Tool in Electro Acoustic Music' I have create tools for live compostion in SuperCollider. These tools were used in my degree concert at KMH on the 9th of September 2020."},
         { projectName: "Lead You Home", durata: "6' 45", format: "22.1", description:"This is a gift to Marcus, a friend whom I shared everything with. As I did not have time to tell him just how much this meant and came to mean for me I interpreted one of our creations from 2014 to try and honor that everything which we once shared. This is a new and a last and a lonely For BDK. Through me alone and through that which I am today. I take your hand, I am going to lead you home. Rest in peace dear. Brown and white noise with pop-song deconstructed. Pop-song: “Lead You Home” by For BDK. Realised in SuperCollider and mixed for 22.1 speakers in reaper."},
     ]},
     {year: "2019", projects: [
+        { projectName: "All In", durata: "30'", format: "short film", description: "Original score for film by Caroline Eriksson. Premiered at Gothenburg Film Festival."},
         { projectName: "now that you are done: Formless", durata:"6' 15", format: "29.4", description: "In the aftermath of the previous piece – A formless moving stream of sound. Again the piece follows rigid iterations, now with continuous hits without repetition where the meeting point for the material changes at every instance."},
         { projectName: "EMiT", durata:"20'", format: "29.4", description: "EMIT I – Language and seconds and 'Jag frågade mig själv men glömde svara' and arrivals. Came together and back for this piece. This will give rise to yet something new. EMIT II – Then they came back and back again. This is something new"},
     ]},
@@ -41,4 +49,4 @@ const SOUNDS = [
 
   ];
 
-export default Sounds;
+export default Compositions;

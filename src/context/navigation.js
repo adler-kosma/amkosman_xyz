@@ -2,12 +2,28 @@ import { createContext, useState, useEffect } from "react";
 
 const NavigationContext = createContext();
 
+// Old menu paths, kept so existing links still land somewhere.
+const REDIRECTS = {
+    '/works': '/compositions',
+    '/multichannel': '/compositions',
+    '/discography': '/releases',
+};
+
+function resolvePath(path) {
+    const target = REDIRECTS[path];
+    if (target) {
+        window.history.replaceState({}, '', target);
+        return target;
+    }
+    return path;
+}
+
 function NavigationProvider({children}) {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+    const [currentPath, setCurrentPath] = useState(() => resolvePath(window.location.pathname));
 
     useEffect(() => {
         const handler = () => {
-            setCurrentPath(window.location.pathname);
+            setCurrentPath(resolvePath(window.location.pathname));
         };
         window.addEventListener('popstate', handler);
 

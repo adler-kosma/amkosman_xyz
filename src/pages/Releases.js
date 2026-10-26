@@ -1,10 +1,10 @@
 import React from "react";
 
-function Discography() {
+function Releases() {
   return (
     <div>
       <div className="box">
-        <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Discography</h1>
+        <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Releases</h1>
         <div style={{marginLeft: '30px', top: '30px', lineHeight: 2}}>
           <p class="text-header" style={{top: '30px'}}>Love Actually – Kid08</p>
           <p class="header" style={{margin: '10px'}}>27.03.2026</p>
@@ -28,12 +28,11 @@ function Discography() {
           <p class="text-header" style={{top: '30px'}}>No One Notice</p>
           <p class="header" style={{margin: '10px'}}>14.03.2016</p>
           <iframe title='3' style={{border: 0, width: '100%', height: '120px', boxShadow: '0px 0px 10px black'}} src="https://bandcamp.com/EmbeddedPlayer/track=3128159752/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://amkosman.bandcamp.com/track/no-one-notice">No One Notice by Adele Marcia Kosman</a></iframe>
-        </div>
-      </div>
+        </div>      </div>
     </div>
   );
 }
 
 
 
-export default Discography;
+export default Releases;

@@ -2,11 +2,10 @@ import './styles/App.css';
 import RouteElement from './components/Route';
 import Menu from './pages/Menu';
 import About from './pages/About';
+import Compositions from './pages/Compositions';
 import Installations from './pages/Installations';
-import Sounds from './pages/Sounds';
-import Discography from './pages/Discography';
+import Releases from './pages/Releases';
 import Contact from './pages/Contact'
-import Works from './pages/Works';
 import * as React from "react";
 
 
@@ -23,21 +22,17 @@ export default function App () {
             <Menu />
             <About />
           </RouteElement>
-          <RouteElement path="/works">
+          <RouteElement path="/compositions">
             <Menu />
-            <Works />
+            <Compositions />
           </RouteElement>
           <RouteElement path="/installations">
             <Menu />
             <Installations />
           </RouteElement>
-          <RouteElement path="/multichannel">
+          <RouteElement path="/releases">
             <Menu />
-            <Sounds />
-          </RouteElement>
-          <RouteElement path="/discography">
-            <Menu />
-            <Discography />
+            <Releases />
           </RouteElement>
           <RouteElement path="/contact">
             <Menu />

@@ -27,7 +27,7 @@ function Installations() {
 
 const INSTALLATION = [
     {year: "2024", projects: [
-        { projectName: "Time is My Body", format: "4.0", description: "4-channel sound piece for installation by Signe Johannessen. Premiered at Bohusläns Museum."},
+        { projectName: "Time is My Body", durata: "9' 36", format: "4.0", description: "4-channel sound piece for installation by Signe Johannessen. Premiered at Bohusläns Museum."},
     ]},
     {year: "2023", projects: [
         { projectName: "Prey/Pray", durata: "12'", format: "video with stereo sound",link: "https://signejohannessen.se/prey-pray-2023/", linkName: "www.signeJohannessen.se", description: "Video work by Signe Johanessen, sound and music by Adele Kosman. Exhibited at Örebro Konsthall 01.04.23-28.05.23 and Oslo Kunstforening 10.08.23—17.09.23"},
@@ -40,8 +40,8 @@ const INSTALLATION = [
         { projectName: "wave", durata:"10'", format:"6.0", description: "Sound piece for installation by Fathia Mohidin. Exhibited at Luleå Biennalen"},
     ]},
     {year: "2019", projects: [
-        { projectName: "Hypersea", durata:"30'", format: "2 dancers, stereo sound", link: "<a href=https://youtu.be/3xbedU33AjI target='_blank'>See documentation here.</a>", description: "A collaboration with Sara Skoglund and Klara SjöblomPerformed and exhibited in Henningsvær Lofoten Norway"},
-        { projectName: "For Dancemusic You’d Emit to Formless", durata:"35'", format: "4.0", description: "Ljudbänken for Stockholm Konst"},
+        { projectName: "Hypersea", durata:"30'", format: "performance, 2 dancers, stereo sound", link: "<a href=https://youtu.be/3xbedU33AjI target='_blank'>See documentation here.</a>", description: "Composition and concept by Adele Kosman. A collaboration with dancers Sara Skoglund and Klara Sjöblom. Performed and exhibited in Henningsvær, Lofoten, Norway."},
+        { projectName: "For Dancemusic You’d Emit to Formless", durata:"35'", format: "4.0", description: "Sound piece for 4 channels for Ljudbänken by Stockholm Konst. Public sound installation in Hässelby torg."},
     ]}
 
   ];
