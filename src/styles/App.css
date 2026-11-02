@@ -382,6 +382,10 @@ h1 {
   font-size: 3.3vw;
 }
 
+.releases p.header {
+  font-size: 3.3vw;
+}
+
 .text-title {
   margin-left:10px;
   margin-right:25px;
@@ -442,6 +446,24 @@ h1 {
 .contactBox h1 {
   line-height: 1;
   margin: 0.35em 0 0.3em;
+}
+
+/* Years in the About lists, in the same pink as the year headings. */
+.year {
+  color: #d8a7b1;
+}
+
+/* Releases: title above a pink year, sized like the year headings on the works pages. */
+.releases .text-header {
+  top: 0 !important;
+  margin-bottom: 0.2em;
+}
+
+.releases p.header {
+  color: #d8a7b1;
+  font-size: 1.25vw;
+  line-height: 1.2;
+  margin: 0 6px 0.6em !important;
 }
 
 /* Compositions and installations: tighter spacing within and between works. */
@@ -576,7 +598,8 @@ h1 {
 }
 
 .box.releases p.header {
-  margin: 0 22px 6px !important;
+  font-size: 17px;
+  margin: 0 22px 8px !important;
 }
 
 .box.works .text-header {
