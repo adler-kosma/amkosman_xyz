@@ -1,25 +1,27 @@
 import React from "react";
 import WorksComponent from "../components/WorksComponent";
+import EndMark from "../components/EndMark";
 
 function Compositions() {
   return (
     <div>
-      <div className="box">
+      <div className="box works">
       <h1 style={{backgroundColor: 'rgb(255, 253, 253, .0)', color: 'white', boxShadow: 'none'}}>Compositions</h1>
       {COMPOSITIONS.map(({ year, projects }) => {
           return (
             <div key={year}>
                <p className="text-header" style={{color: "#d8a7b1", top: "10px"}}>{year}</p>
-               {projects.map(({ projectName, durata, format, description }) => {
+               {projects.map(({ projectName, durata, format, link, linkName, description }) => {
                 return (
                     <div key={projectName}>
-                        <WorksComponent projectName={projectName} durata={durata} format={format} description={description} />
+                        <WorksComponent projectName={projectName} durata={durata} format={format} link={link} linkName={linkName} description={description} />
                     </div>
                 );
                 })}
             </div>
           );
         })}
+      <EndMark />
       </div>
     </div>
   );
@@ -27,14 +29,14 @@ function Compositions() {
 
 const COMPOSITIONS = [
     {year: "2026", projects: [
-        { projectName: "Mini Works at Sound of Stockholm", format: "performance", description: "Ensemble: vocal trio and dancer Anna Fitoussi."},
+        { projectName: "Mini Works at Sound of Stockholm", format: "performance", link: "https://soundofstockholm.se/#anna-fitoussi-+-adele-kosman", linkName: "soundofstockholm.se", description: "Ensemble: vocal trio and dancer Anna Fitoussi. Fylkingen 21.11.26, 18:00."},
         { projectName: "Speaking (to the sea)", format: "choir", description: "Choir piece commissioned by Art Inside Out as a part of a collaboration with Signe Johannessen and her video work Havskoloni."},
     ]},
     {year: "2025", projects: [
-        { projectName: "Enter", format: "choir", description: "Choir piece commissioned by Konstmusiksystrar. Premiered at Eric Ericssonhallen by Tusen Tungor."},
+        { projectName: "Enter", format: "choir", link: "https://soundcloud.com/amkosman/enter-performed-by-tusen", linkName: "Listen on SoundCloud", description: "Choir piece commissioned by Konstmusiksystrar. Premiered at Eric Ericssonhallen by Tusen Tungor."},
     ]},
     {year: "2020", projects: [
-        { projectName: "Degree concert 'Give/Take/in concert'", durata: "35'", format: "4.1", description: "Live coding live performance live concert. Along with my thesis 'The Live Concert as a Compositional Tool in Electro Acoustic Music' I have create tools for live compostion in SuperCollider. These tools were used in my degree concert at KMH on the 9th of September 2020."},
+        { projectName: "Give / Take in concert", durata: "35'", format: "4.1", link: "https://youtu.be/PHekCIos-ME", linkName: "See documentation here", description: "Live coding live performance live concert. Along with my thesis 'The Live Concert as a Compositional Tool in Electro Acoustic Music' I have create tools for live compostion in SuperCollider. These tools were used in my degree concert at KMH on the 9th of September 2020."},
         { projectName: "Lead You Home", durata: "6' 45", format: "22.1", description:"This is a gift to Marcus, a friend whom I shared everything with. As I did not have time to tell him just how much this meant and came to mean for me I interpreted one of our creations from 2014 to try and honor that everything which we once shared. This is a new and a last and a lonely For BDK. Through me alone and through that which I am today. I take your hand, I am going to lead you home. Rest in peace dear. Brown and white noise with pop-song deconstructed. Pop-song: “Lead You Home” by For BDK. Realised in SuperCollider and mixed for 22.1 speakers in reaper."},
     ]},
     {year: "2019", projects: [

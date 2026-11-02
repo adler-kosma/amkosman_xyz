@@ -1,3 +1,4 @@
+import EndMark from "../components/EndMark";
 
 function Contact()  {
     return(
@@ -12,6 +13,7 @@ function Contact()  {
                 <p style={{color:'black'}}> Email: <a href="mailto:hello@amkosman.xyz">hello [@] amkosman . xyz</a></p>
             </div>
             </div>
+            <EndMark />
         </div>
     );
 }
