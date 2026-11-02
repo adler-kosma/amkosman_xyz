@@ -7,6 +7,7 @@ function WorksComponent({projectName, durata, format, link, linkName, descriptio
         {durata && <p className="text-body" style={{marginLeft: "60px", top: "0px"}}>durata: {durata}</p>}
         {format && <p className="text-body" style={{marginLeft: "60px", top: "0px"}}>format: {format}</p>}
         {description && <p className="text-body" style={{marginLeft: "60px", top: "0px"}}>{description}</p>}
+        {link && <p className="text-body" style={{marginLeft: "60px", top: "0px"}}><a href={link} target="_blank" rel="noopener noreferrer">{linkName || link}</a></p>}
     </div>
   );
 }

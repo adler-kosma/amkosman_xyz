@@ -39,6 +39,9 @@ function About() {
             <p className="text-body">2027 – Circolo Scandinavo, Rome</p>
             <p className="text-body">2026 – Cité internationale des arts, Paris</p>
             <p className="text-body">2024 – Cité internationale des arts, Paris</p>
+            <p className="text-title" style={{color: "black"}}>Interviews</p>
+            <p className="text-body">2023 – <a href="https://odalisquemagazine.com/2023/12/21/interview-with-adele-marcia-kosman/" target="_blank" rel="noopener noreferrer">Odalisque Magazine, interview on VOLVM 2. pieces</a></p>
+            <p className="text-body">2022 – <a href="https://www.youtube.com/watch?v=dgBFeYWbfK8" target="_blank" rel="noopener noreferrer">SITE Zones, video interview</a></p>
             <div className="credits">
                 <p className="text-body credits-label">Credits</p>
                 <p className="text-body">{textCreditsDesign}</p>

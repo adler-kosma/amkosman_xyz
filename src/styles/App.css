@@ -321,8 +321,11 @@ filter: blur(0px);
 }
 
 @media screen and (max-width: 768px) {
+/* The close-up portrait on the left of the collage, scaled to fill the space below the menu. */
 .img-background {
-  background-image: url('../img/background-mobile-yi-chen-lee.jpg');
+  background-size: auto calc(100% - var(--menu-height, 92px));
+  background-position: 16% var(--menu-height, 92px);
+  background-repeat: no-repeat;
 }
 }
 
@@ -397,4 +400,118 @@ h1 {
 }
 @media (max-aspect-ratio: 16/9) {
 .video-foreground { width: 300%; left: -100%; }
+}
+
+/* Phones: the menu is a compact bar at the top and pages get a full-width
+   content panel. !important overrides the inline margins in the pages. */
+@media screen and (max-width: 768px) {
+
+.menu-compact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 18px;
+  padding: 14px 16px;
+  background-color: rgb(255, 253, 253, .85);
+  box-shadow: 0px 0px 10px black;
+}
+
+.menu-compact h1 {
+  font-size: clamp(16px, 5.4vw, 24px);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.menu-compact h1.active a {
+  border-bottom: 2px solid #d8a7b1;
+}
+
+.box,
+.contactBox {
+  position: fixed;
+  top: calc(var(--menu-height, 92px) + 10px);
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-wrap: anywhere;
+}
+
+.box h1,
+.contactBox h1 {
+  font-size: 6vw;
+  white-space: nowrap;
+  line-height: 1.1;
+  margin: 20px 16px 12px;
+}
+
+.contactBox {
+  bottom: auto;
+  padding-bottom: 16px;
+}
+
+.box [style*="margin-left"],
+.contactBox [style*="margin-left"] {
+  margin-left: 0 !important;
+}
+
+.box .text-header,
+.box .text-title,
+.box .text-body,
+.contactBox .text-body {
+  position: static;
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+  text-align: left;
+}
+
+.box .text-header {
+  font-size: 17px;
+  margin-top: 1.4em;
+}
+
+.box .text-title {
+  font-size: 15px;
+}
+
+.box .text-body,
+.contactBox .text-body {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.box .text-title + .text-body,
+.box .text-body + .text-body {
+  margin-left: 28px !important;
+}
+
+.box > p.text-body {
+  margin-left: 16px !important;
+}
+
+.box .credits .text-body {
+  font-size: 11px;
+}
+
+.box iframe {
+  width: calc(100% - 32px) !important;
+  margin: 0 16px;
+}
+
+.box p.header {
+  margin: 0 16px 8px !important;
+}
+
 }

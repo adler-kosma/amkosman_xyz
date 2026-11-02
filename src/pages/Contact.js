@@ -6,10 +6,10 @@ function Contact()  {
             <div style={{marginLeft: '30px'}}>
             <div className="text-body" style={{position: "relative", padding: "6px", marginLeft: "0px", textShadow: "0px 0px 5px white", color: "black"}}>
                 Instagram:
-                <a style={{}} href="https://www.instagram.com/adelemarcia/" rel='noopener'> @adelemarcia</a>
+                <a style={{}} href="https://www.instagram.com/adelemarcia/" target="_blank" rel="noopener noreferrer"> @adelemarcia</a>
             </div>
             <div className="text-body" style={{bottom: "6px", position: "relative", padding: "6px", marginLeft: "0px", textShadow: "0px 0px 5px white"}}>
-                <p style={{color:'black'}}> Email: hello [@] amkosman . xyz</p>
+                <p style={{color:'black'}}> Email: <a href="mailto:hello@amkosman.xyz">hello [@] amkosman . xyz</a></p>
             </div>
             </div>
         </div>
